@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
 import user from '../path/user.json';
-
+import data from '../path/data.json';
 export const App = () => {
   return (
-    <div>
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -12,9 +13,17 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-    </div>
+      <Statistics stats={data} />
+    </>
   );
 };
+// export const Statistics = () => {
+//   return (
+//     <>
+//       <Statistics stats={data} />
+//     </>
+//   );
+// };
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -25,4 +34,7 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
   }).isRequired,
+};
+Statistics.propTypes = {
+  stats: PropTypes.array.isRequired,
 };
