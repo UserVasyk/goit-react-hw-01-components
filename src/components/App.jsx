@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
 import user from '../path/user.json';
 import data from '../path/data.json';
+import friends from '../path/friends.json';
 export const App = () => {
   return (
     <>
@@ -14,16 +16,11 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics stats={data} />
+      <FriendList friends={friends} />
     </>
   );
 };
-// export const Statistics = () => {
-//   return (
-//     <>
-//       <Statistics stats={data} />
-//     </>
-//   );
-// };
+// Profile PropTypes
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -35,6 +32,11 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }).isRequired,
 };
+// Statistics PropTypes
 Statistics.propTypes = {
   stats: PropTypes.array.isRequired,
+};
+// FriendsList PropTypes
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
 };

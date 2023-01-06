@@ -12,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e1e1e1;
 }
 
 code {
@@ -31,4 +32,10 @@ h6 {
 }
 ul {
   list-style: none;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }

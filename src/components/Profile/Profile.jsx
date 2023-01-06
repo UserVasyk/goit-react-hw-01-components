@@ -8,13 +8,12 @@ import {
   UserName,
   Tag,
   Location,
-  UserStat,
 } from './Profile.styled';
 export const Profile = ({ avatar, location, stats, tag, username }) => {
   return (
     <Box>
       <CardInfo>
-        <Avatar src={avatar} alt={username} avatar />
+        <Avatar src={avatar} alt={username} />
         <UserName>{username}</UserName>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
@@ -23,15 +22,15 @@ export const Profile = ({ avatar, location, stats, tag, username }) => {
       <ListInfo>
         <ListItem>
           <span>Followers</span>
-          <UserStat>{stats.followers}</UserStat>
+          <span>{stats.followers}</span>
         </ListItem>
         <ListItem>
           <span>Views</span>
-          <UserStat>{stats.views}</UserStat>
+          <span>{stats.views}</span>
         </ListItem>
         <ListItem>
           <span>Likes</span>
-          <UserStat>{stats.likes}</UserStat>
+          <span>{stats.likes}</span>
         </ListItem>
       </ListInfo>
     </Box>

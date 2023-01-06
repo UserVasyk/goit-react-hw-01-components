@@ -1,14 +1,10 @@
 import styled from '@emotion/styled';
 export const Box = styled.div`
+  margin-top: 15px;
   background-color: #e1e1e1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 `;
 export const CardInfo = styled.div`
   background-color: #fff;
-  margin-top: 15px;
   width: 350px;
   padding: 40px;
   display: flex;
@@ -28,6 +24,9 @@ export const ListItem = styled.li`
   border: 1px solid #8d8d8d;
   padding: 20px 10px;
   gap: 8px;
+  span:nth-of-type(2) {
+    font-weight: 700;
+  }
 `;
 export const Avatar = styled.img`
   width: 150px;
@@ -41,12 +40,9 @@ export const UserName = styled.p`
 export const Tag = styled.p`
   margin-bottom: 12px;
   font-size: 18px;
-  color: #1c1c1c;
+  color: #283446;
 `;
 export const Location = styled.p`
   font-size: 18px;
-  color: #1c1c1c;
-`;
-export const UserStat = styled.span`
-  font-weight: 700;
+  color: #283446;
 `;
