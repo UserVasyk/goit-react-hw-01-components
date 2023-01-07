@@ -13,6 +13,7 @@ export const IsOnline = styled.span`
   height: 15px;
   border-radius: 50%;
 `;
+
 export const ItemFriend = styled.li`
   width: 300px;
   height: 80px;
